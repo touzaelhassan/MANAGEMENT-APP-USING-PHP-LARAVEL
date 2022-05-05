@@ -29,7 +29,7 @@
             display: block;
             background: url('/images/trash.svg');
             background-position: center;
-            background-size: cover;
+            background-size: 18px;
             background-repeat: no-repeat;
             padding: 0 10px;
             border: 0;

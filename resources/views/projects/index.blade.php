@@ -8,7 +8,7 @@
     </div>
 
     <div>
-      <a href="/projects/create" class="btn btn-primary px-4" role="button">مشروع جديد</a>
+      <a href="/projects/create" class="btn btn-primary px-4" role="button">إضافة مشروع جديد</a>
     </div>
 </header>
 

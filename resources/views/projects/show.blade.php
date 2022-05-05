@@ -24,7 +24,7 @@
                 <div class="status">
                     @switch($project->status)
                     @case(1)
-                      <span class="text-success">مكتمل</span>
+                        <span class="text-success">مكتمل</span>
                     @break
                     @case(2)
                         <span class="text-danger">ملغي</span>
@@ -66,30 +66,40 @@
     <div class="col-lg-8">
         <div class="project-tasks">
             @foreach($project->tasks as $task)
-            <div class="card">
+            <div class="card d-flex flex-row justify-content-between align-items-center mb-3 p-3">
 
                 <div class={{ $task->done ? 'checked muted' : ''}}>
                     {{$task->body}}
                 </div>
 
-                <div>
-                    <form action="/projects/{{$project->id}}/tasks/{{$task->id}}" method="POST">
+                <div class="d-flex align-items-center">
+
+                    <form action="/projects/{{$project->id}}/tasks/{{$task->id}}" method="POST" class="card d-flex align-items-center">
                         @csrf
                         @method('PATCH')
                         <input type="checkbox"  {{ $task->done ? 'checked' : ''}} class="ml-4" name="done" onchange="this.form.submit()">
                     </form>
+
+                    <div class="d-flex align-items-center me-3">
+                        <form action="/projects/{{ $task->project_id}}/tasks/{{ $task->id }}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <input type="submit" class="btn-delete" value="">
+                        </form>
+                    </div>
+
                 </div>
 
             </div>
             @endforeach
         </div>
 
-        <div class="add-task">
+        <div class="add-task mt-5">
             <div class="card">
-                <form action="/projects/{{$project->id}}/tasks" method="POST">
+                <form action="/projects/{{$project->id}}/tasks" method="POST" class="d-flex p-3">
                     @csrf
-                    <input type="text" class="form-control p-2 ml-2" name="body" placeholder="أضف مهمة جديدة">
-                    <button type="submit" class="btn btn-primary">إضافة</button>
+                    <input type="text" class="form-control p-2" name="body" placeholder="أضف مهمة جديدة">
+                    <button type="submit" class="btn btn-primary me-4">إضافة</button>
                 </form>
             </div>
         </div>
