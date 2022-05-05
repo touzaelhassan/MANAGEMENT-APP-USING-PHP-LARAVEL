@@ -13,11 +13,12 @@
 </header>
 
 <section>
+    <div class="row">
     @forelse($projects as $project)
 
         <div class="col-4 mb-4">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body text-end">
 
                     <div class="status">
                         @switch($project->status)
@@ -37,7 +38,7 @@
                     </h5>
 
                     <div class="card-text mt-4">
-                        {{ $project->description }}
+                        {{ Str::limit($project->description, 150) }}
                     </div>
 
                 </div>
@@ -51,11 +52,12 @@
         <div class="align-content-center m-auto text-center">
             <p>ليس لديك أي مشروع في لوحة إدارة المشاريع</p>
             <div class="mt-5">
-                <a href="/projects/create" class="btn btn-primary btn-lg d-inline-flex align-items-center" role="button">أنشئ مشروعا جديدا</a>
+                <a href="./projects/create" class="btn btn-primary btn-lg d-inline-flex align-items-center" role="button">أنشئ مشروعا جديدا</a>
             </div>
         </div>
 
     @endforelse
+    </div>
 </section>
 
 @endsection

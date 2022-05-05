@@ -18,6 +18,24 @@
      <link rel="preconnect" href="https://fonts.gstatic.com"/><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet"/>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+
+        body{
+            font-family: cairo, 'sans-serif';
+        }
+
+        .btn-delete{
+            display: block;
+            background: url('/images/trash.svg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 0 10px;
+            border: 0;
+            outline: none;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

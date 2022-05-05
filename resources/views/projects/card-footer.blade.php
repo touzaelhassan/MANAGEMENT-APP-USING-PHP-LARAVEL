@@ -1,4 +1,4 @@
-<div class="card-footer">
+<div class="card-footer d-flex justify-content-between align-items-center" dir="rtl">
 
     <div class="d-flex">
       <div class="d-flex align-items-center">
@@ -18,7 +18,7 @@
         <form action="projects/{project}" method="POST">
             @method('DELETE')
             @csrf
-            <input type="submit" value="">
+            <input type="submit" class="btn-delete" value="">
         </form>
     </div>
 
