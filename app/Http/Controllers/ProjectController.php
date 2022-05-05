@@ -19,7 +19,11 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        // Get The logged in user projects data from the database using Project Model
+        $projects = auth()->user()->projects;
+
+        // Pass The logged in projects data To Index View ( The index view will display The logged in user projects )
+        return view('projects.index', compact('projects'));
     }
 
     /**
