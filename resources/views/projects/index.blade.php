@@ -13,7 +13,7 @@
 </header>
 
 <section>
-    <div class="row">
+    <div class="row" dir="rtl">
     @forelse($projects as $project)
 
         <div class="col-4 mb-4">

@@ -68,7 +68,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return view('projects.show', compact('project'));
     }
 
     /**
@@ -91,7 +91,11 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $project->update([
+            'status' => request('status')
+        ]);
+
+        return redirect('/projects/' . $project->id);
     }
 
     /**
