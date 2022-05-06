@@ -1,0 +1,13 @@
+.user-image {
+    width: 2em;
+    height: 2em;
+    margin-right: 10px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.card {
+    box-shadow: 1px, 1px, 2px, rba(0, 0, 0, 0.08);
+}

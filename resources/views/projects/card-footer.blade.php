@@ -1,4 +1,4 @@
-<div class="card-footer d-flex justify-content-between align-items-center" dir="rtl">
+<div class="card-footer d-flex justify-content-between align-items-center bg-transparent pb-3" dir="rtl">
 
     <div class="d-flex">
       <div class="d-flex align-items-center">

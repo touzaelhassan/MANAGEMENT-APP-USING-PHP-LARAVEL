@@ -34,7 +34,7 @@
                     </div>
 
                     <h5 class="card-title font-weight-bold">
-                        <a href="/projects/{{ $project->id }}">{{ $project->title }}</a>
+                        <a href="/projects/{{ $project->id }}" class="text-dark text-decoration-none mt-3 d-block">{{ $project->title }}</a>
                     </h5>
 
                     <div class="card-text mt-4">
