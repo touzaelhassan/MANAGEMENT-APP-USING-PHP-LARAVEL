@@ -19,21 +19,33 @@
                     <div class="form-group">
                         <label for="name">الإسم</label>
                         <input type="text" class="form-control " value="{{ auth()->user()->name }}" name="name">
+                        @error('name')
+                        <div class="text-danger"><small>{{ $message }}</small></div>    
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="email">البريد الإلكتروني</label>
                         <input type="email" class="form-control" value="{{ auth()->user()->email }}" name="email">
+                        @error('email')
+                        <div class="text-danger"><small>{{ $message }}</small></div>    
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="password">كلمة المرور</label>
                         <input type="password" class="form-control" name="password">
+                        @error('password')
+                        <div class="text-danger"><small>{{ $message }}</small></div>    
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="password-confirmation">تأكيد كلمة المرور</label>
                         <input type="password" class="form-control" name="password-confirmation">
+                        @error('password-confirmation')
+                        <div class="text-danger"><small>{{ $message }}</small></div>    
+                        @enderror
                     </div>
 
                     <div class="form-group">
@@ -41,6 +53,9 @@
                         <div class="custom-file">
                             <input type="file" id="file" class="custom-file-input form-control" name="image">
                             <label for="image" id="image-label" class="custom-file-label text-left"></label>
+                            @error('image')
+                            <div class="text-danger"><small>{{ $message }}</small></div>    
+                            @enderror
                         </div>
                     </div>
 
