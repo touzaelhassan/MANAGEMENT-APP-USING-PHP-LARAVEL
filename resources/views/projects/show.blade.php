@@ -94,7 +94,7 @@
             @endforeach
         </div>
 
-        <div class="add-task mt-5">
+        <div class="add-task mt-3">
             <div class="card">
                 <form action="/projects/{{$project->id}}/tasks" method="POST" class="d-flex p-3">
                     @csrf
